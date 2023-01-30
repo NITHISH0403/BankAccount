@@ -39,16 +39,16 @@ class BankAccount
         Logger l=Logger.getLogger("My Logger");
 
         l.log(Level.INFO, () ->"Enter the Holder Name:");
-        String h_name = s.nextLine ();
+        String hname = s.nextLine ();
 
         l.log(Level.INFO, () ->"Enter the Account Number:");
-        int a_no = s.nextInt ();
+        int ano = s.nextInt ();
 
         double balance = 0.0;
-        double d_amt;
-        double w_amt;
+        double damt;
+        double wamt;
 
-        Payment p = new Payment (h_name, a_no);
+        Payment p = new Payment (hname, ano);
 
         while(true)
         {
@@ -57,17 +57,17 @@ class BankAccount
             switch (ch) {
                 case 1 -> {
                     l.info("Your Deposit Amount :");
-                    d_amt = s.nextDouble();
-                    balance = p.deposit(d_amt, balance);
+                    damt = s.nextDouble();
+                    balance = p.deposit(damt, balance);
                     l.log(Level.INFO, () ->"Your Current Balance :" + balance);
                 }
                 case 2 -> {
                     l.info("Your Withdraw Amount :");
-                    w_amt = s.nextDouble();
-                    if (balance < w_amt) {
+                    wamt = s.nextDouble();
+                    if (balance < wamt) {
                         l.log(Level.INFO, () ->"Your Amount balance : " + balance + ". so, didn't withdraw Amount.");
                     } else {
-                        balance = p.withdraw(w_amt, balance);
+                        balance = p.withdraw(wamt, balance);
                         l.log(Level.INFO, () ->"Your Current Balance :" + balance);
                     }
                 }
