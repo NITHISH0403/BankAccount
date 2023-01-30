@@ -59,7 +59,7 @@ class BankAccount
                     l.info("Your Deposit Amount :");
                     damt = s.nextDouble();
                     balance = p.deposit(damt, balance);
-                    l.log(Level.INFO, () ->"Your Current Balance :" + balance);
+                    l.log(Level.INFO, () ->"Your Balance :" + balance);
                 }
                 case 2 -> {
                     l.info("Your Withdraw Amount :");
@@ -68,7 +68,7 @@ class BankAccount
                         l.log(Level.INFO, () ->"Your Amount balance : " + balance + ". so, didn't withdraw Amount.");
                     } else {
                         balance = p.withdraw(wamt, balance);
-                        l.log(Level.INFO, () ->"Your Current Balance :" + balance);
+                        l.log(Level.INFO, () ->"Your Current Amount :" + balance);
                     }
                 }
                 case 3 -> p.amount(balance);
