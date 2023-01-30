@@ -2,7 +2,6 @@ package org.example;
 
 import java.util.logging.*;
 import java.util.*;
-import java.lang.*;
 
 class Payment
 {
