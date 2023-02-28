@@ -3,34 +3,6 @@ package org.example;
 import java.util.logging.*;
 import java.util.*;
 
-class Payment
-{
-    static Logger l=Logger.getLogger("My Logger");
-    Payment (String name, int no)
-    {
-        l.log(Level.INFO, () -> "Hii\t" + name + "\tyour account will be created.");
-        l.log(Level.INFO, () ->"Your account No is\t" + no);
-    }
-
-    double deposit (double d, double balance)
-    {
-        balance = balance + d;
-        return balance;
-    }
-
-    double withdraw (double w, double balance)
-    {
-        balance = balance - w;
-        return balance;
-    }
-
-    void amount (double balance)
-    {
-        l.log(Level.INFO, () ->"Your Current Balance :" + balance);
-    }
-
-}
-
 class BankAccount
 {
     public static void main (String[]arg)
