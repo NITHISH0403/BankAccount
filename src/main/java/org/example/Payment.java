@@ -9,8 +9,8 @@ class Payment
     //constructor
     Payment (String name, int no)
     {
-        l.info ("Hii\t" + name + "\tyour account will be created.");
-        l.info ("Your account No is\t" + no);
+        l.log (LEVEL.INFO,()->"Hii\t" + name + "\tyour account will be created.");
+        l.log (LEVEL.INFO,()->"Your account No is\t" + no);
     }
 
     //method that allows the user to make a deposit to the account.
@@ -30,7 +30,7 @@ class Payment
     //method that returns the current balance of the account.
     void amount (double balance)
     {
-        l.info ("Your Current Balance :" + balance);
+        l.log (LEVEL.INFO,()->"Your Current Balance :" + balance);
     }
 
 }
